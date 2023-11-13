@@ -1,0 +1,67 @@
+* {
+    border: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+
+.todo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.numeros {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    /* Gracias a la posicion en relativa la barra se queda dentro del div, que esta en absoluta */
+    position: relative;
+}
+
+#barra{
+    background-color: rgb(127, 187, 255);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    /* Gracias a la position absolute, el div de la barra no cuenta para el justify-content del div numeros y se pueden centrar los numeros bien */
+    position: absolute;
+    top: 45%;
+    left: 0;
+    /* transform: translateY(-50%);  */
+}
+
+.circulos {
+    font: 1.2em sans-serif;
+    border: 3px solid;
+    border-color: rgba(128, 128, 128, 0.384);
+    background-color: white;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.activa{
+    border-color: rgb(127, 187, 255);
+}
+
+.botones{
+    padding-top: 30px;
+}
+#pre{
+    cursor: not-allowed;
+}
+#nex{
+    cursor: pointer;
+}
